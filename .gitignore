@@ -2,4 +2,4 @@ build.log
 *.log
 *.report
 *.bin
-
+*.suo
