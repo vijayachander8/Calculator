@@ -1,6 +1,7 @@
 pipeline {
     agent any
-      
+  
+tool name:'Maven3',type:'maven'   
     stages {
         stage('Compile') {
             steps { 
