@@ -1,3 +1,4 @@
+def mvnHome= tool name: 'Maven3', type: 'maven'
 pipeline {
       agent any
 
@@ -5,8 +6,7 @@ pipeline {
       stage('package') {
       steps
       {
-          def mvnHome= tool name:'Maven3', type: 'maven'
-                sh "${mvnHome}/bin/mvn package"
+                         sh "${mvnHome}/bin/mvn package"
             }
        }
        }
