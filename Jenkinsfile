@@ -1,8 +1,12 @@
 pipeline {
     agent any
-  
-tool name:'Maven3',type:'maven'   
+ 
     stages {
+    stage ('preparation')
+    { steps
+    {tool name:'Maven3',type:'maven'
+    }
+    }
         stage('Compile') {
             steps { 
                 sh 'mvn compile'
