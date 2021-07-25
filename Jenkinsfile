@@ -1,15 +1,9 @@
-def mvnHome= tool name: 'Maven3', type: 'maven'
-pipeline {
-      agent any
-
-      stages{
-      stage('package') {
-      steps
-      {
-                         sh "${mvnHome}/bin/mvn package"
-            }
-       }
-       }
-    }
-
+ node{
+   stage('Compile-Package'){
+      // Get maven home path
+      def mvnHome =  tool name: 'Maven3', type: 'maven'   
+      sh "${mvnHome}/bin/mvn package"
+   }
+  
+}
 
